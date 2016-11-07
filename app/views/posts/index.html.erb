@@ -1,0 +1,17 @@
+<h1>All Posts</h1>
+<hr />
+
+<!-- loop all of the posts and output some info about them -->
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <%= post.title %> -
+      <%= link_to 'Show', post_path(post) %> -
+      <%= link_to 'Edit', edit_post_path(post) %> -
+      <%= link_to 'Delete', post_path(post), method: :delete, data: {confirm: 'really delete this post?'} %> 
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Post', new_post_path %>
+<!--this link_to will create <a href= '/post/new'>New Post</a> -->

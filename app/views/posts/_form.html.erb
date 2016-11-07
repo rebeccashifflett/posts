@@ -1,0 +1,20 @@
+<%= form_for @post do |f| %>
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+  <br />
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br />
+
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+  <br />
+
+  <%= f.label :public %>
+  <%= f.check_box :public %>
+  <br />
+
+
+  <%= f.submit %>
+<% end %>
